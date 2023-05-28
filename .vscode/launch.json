@@ -1,0 +1,30 @@
+{
+ // Use IntelliSense to learn about possible attributes.
+ // Hover to view descriptions of existing attributes.
+ // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+ "version": "0.2.0",
+ "configurations": [
+  {
+   "type": "java",
+   "name": "Current File",
+   "request": "launch",
+   "mainClass": "${file}"
+  },
+  {
+   "type": "java",
+   "name": "IntegratorMain",
+   "request": "launch",
+   "mainClass": "ch.ost.mas.cds.integration.processor.IntegratorMain",
+   "projectName": "CDSUebung_4-1",
+   "args": "-host mq-mas-se.cloud.oeint.ch -studemail regina.traber@ost.ch -avghourout Q.Abgabe.AVG_HOUR.Events_regina -avgdayout Q.AVG_DAY.Events_regina -alarmout Q.ALARM.Events_regina "
+  },
+  {
+   "type": "java",
+   "name": "WeatherDataFeeder",
+   "request": "launch",
+   "mainClass": "ch.ost.mas.cds.integration.util.WeatherDataFeeder",
+   "projectName": "CDSUebung_4-1",
+   "args": "-host mq-mas-se.cloud.oeint.ch -inp data/weatherdata_2016.csv -feedinterval 1000"
+  }
+ ]
+}
